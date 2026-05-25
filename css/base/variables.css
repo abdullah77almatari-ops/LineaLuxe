@@ -1,0 +1,91 @@
+/* =========================
+   GLOBAL VARIABLES
+   ========================= */
+:root {
+  /* ===== الألوان الأساسية (وضع النهار - نفس ألوانك الأصلية) ===== */
+  --color-primary: #000000;
+  --color-secondary: #d6b97f;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-text: #222222;
+
+  --color-text-light: #666666;
+  --color-muted: #777777;
+  --color-border: #e5e5e5;
+  --color-gray-bg: #f7f7f7;
+  --color-input-bg: rgb(245, 250, 245);
+  --color-background-light: #fcf8f8;
+
+  /* ===== مرادفات للتوافق مع الملفات القديمة (بدون تعديلها) ===== */
+  --primary: #000000;
+  --primary-color: #000000;
+  --secondary: #d6b97f;
+  --white: #ffffff;
+  --white-color: #ffffff;
+  --black: #000000;
+  --gray: #8a8a8a;
+  --muted-color: #777777;
+  --border-color: #e5e5e5;
+  --bg-color: #f7f7f7;
+  --input-bg: rgb(245, 250, 245);
+  --background-color: #fcf8f8;
+
+  /* ===== الظلال (نفس القيم) ===== */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+  /* ===== الحواف المستديرة ===== */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+
+  /* ===== الانتقالات ===== */
+  --transition: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ===== عروض الحاويات ===== */
+  --container-width: 1200px;
+  --container-padding: 20px;
+}
+
+/* =========================
+     DARK MODE
+     ========================= */
+
+body.dark-mode {
+  /* الألوان الأساسية في الوضع الليلي */
+  --color-primary: #f0f0f0;
+  --color-secondary: #d6b97f;
+  --color-white: #1e1e1e;
+  --color-black: #ffffff;
+  --color-text: #e0e0e0;
+  --color-text-light: #aaaaaa;
+  --color-muted: #999999;
+  --color-border: #444444;
+  --color-gray-bg: #2a2a2a;
+  --color-input-bg: #2c2c2c;
+  --color-background-light: #252525;
+
+  /* مرادفات الوضع الليلي */
+  --primary: #f0f0f0;
+  --primary-color: #f0f0f0;
+  --secondary: #d6b97f;
+  --white: #1e1e1e;
+  --white-color: #1e1e1e;
+  --black: #ffffff;
+  --gray: #aaaaaa;
+  --muted-color: #999999;
+  --border-color: #444444;
+  --bg-color: #2a2a2a;
+  --input-bg: #2c2c2c;
+  --background-color: #252525;
+
+  /* تعديل الظلال لتناسب الخلفية الداكنة */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.35);
+}

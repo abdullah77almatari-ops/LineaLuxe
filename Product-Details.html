@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product Details</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/base/global.css" />
+
+    <!-- Components -->
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/newsletter.css" />
+    <link rel="stylesheet" href="css/components/forms.css" />
+
+    <!-- Sections -->
+    <link rel="stylesheet" href="css/Product-Details.css" />
+    <!-- <link rel="stylesheet" href="css/Product.css" /> -->
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive/responsive.css" />
+  </head>
+
+  <body>
+    <!-- ===========================
+       HEADER
+  ============================ -->
+    <div id="header"></div>
+
+    <!-- ===========================
+       PRODUCT DETAILS
+  ============================ -->
+    <section class="product-details section">
+      <div class="container product-wrapper">
+        <!-- LEFT SIDE -->
+        <div class="product-gallery">
+          <img
+            src="assets/images/product-details/bed4.png"
+            alt="Luxury Bed"
+            class="main-image"
+          />
+
+          <div class="thumbnail-wrapper">
+            <img src="assets/images/product-details/bed3.png" alt="Thumbnail" />
+            <img src="assets/images/product-details/bed2.png" alt="Thumbnail" />
+            <img src="assets/images/product-details/bed5.png" alt="Thumbnail" />
+            <img src="assets/images/product-details/bed1.png" alt="Thumbnail" />
+          </div>
+        </div>
+
+        <!-- RIGHT-->
+        <div class="product-inf">
+          <h1>Luxury table from Azara 5</h1>
+
+          <!-- Rating -->
+          <div class="rating-wrapper">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <span>48 Reviews</span>
+          </div>
+
+          <h2 class="price">349.00$</h2>
+
+          <!-- Type -->
+          <div class="product-option">
+            <h3>Type:</h3>
+
+            <div class="type-options">
+              <img src="assets/images/product-details/bed1.png" alt="Type" />
+              <img src="assets/images/product-details/bed5.png" alt="Type" />
+              <img src="assets/images/product-details/bed3.png" alt="Type" />
+            </div>
+          </div>
+
+          <!--SIZE -->
+          <div class="product-option">
+            <h3>Size:</h3>
+
+            <div class="size-options">
+              <button>Small</button>
+              <button class="active">Medium</button>
+              <button>Big</button>
+            </div>
+          </div>
+
+          <!-- ACTIONS -->
+          <div class="product-actions">
+            <button class="add-cart-btn">
+              <!-- <i class="fa-solid fa-bag-shopping"></i> -->
+              <img src="assets/icons/vect_rocket.svg" alt="Rocket" />
+
+              Add to Card
+            </button>
+
+            <button class="wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+       REVIEWS SECTION
+  ============================ -->
+    <section class="reviews-section section">
+      <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+          <button>Details</button>
+          <button class="active">Reviews</button>
+          <button>Discussions</button>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- LEFT -->
+          <div class="reviews-list">
+            <!-- FILTER -->
+            <div class="filter-box">
+              <!-- <span>Newst</span> -->
+              <select>
+                <option>Newst</option>
+                <!-- <option>All</option> -->
+              </select>
+
+              <!-- <i class="fa-solid fa-chevron-down"></i> -->
+            </div>
+
+            <!-- REVIEW ITEM -->
+            <div class="review-card">
+              <!-- صورة المستخدم -->
+              <img src="images/reviewer-1.jpg" alt="Reviewer" />
+
+              <div class="review-content">
+                <div class="review-top">
+                  <div>
+                    <h4>Mohammed M.</h4>
+
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span>Yesterday</span>
+                </div>
+
+                <p>Excellent .</p>
+              </div>
+            </div>
+
+            <!-- REVIEW ITEM -->
+            <div class="review-card">
+              <img src="images/reviewer-2.jpg" alt="Reviewer" />
+
+              <div class="review-content">
+                <div class="review-top">
+                  <div>
+                    <h4>Ali I.</h4>
+
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span>2 weeks ago</span>
+                </div>
+
+                <p>very good .</p>
+              </div>
+            </div>
+
+            <!-- REVIEW ITEM -->
+            <div class="review-card">
+              <img src="images/reviewer-3.jpg" alt="Reviewer" />
+
+              <div class="review-content">
+                <div class="review-top">
+                  <div>
+                    <h4>Hamza k.</h4>
+
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span>4 weeks ago</span>
+                </div>
+
+                <p>Awesome.</p>
+              </div>
+            </div>
+
+            <!-- REVIEW ITEM -->
+            <div class="review-card">
+              <img src="images/reviewer-4.jpg" alt="Reviewer" />
+
+              <div class="review-content">
+                <div class="review-top">
+                  <div>
+                    <h4>Ominah A.</h4>
+
+                    <div class="review-stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </div>
+                  </div>
+
+                  <span>8 weeks ago</span>
+                </div>
+
+                <p>not that good.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="rating-summary">
+            <!-- Overall -->
+            <div class="overall-rating">
+              <div class="summary-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <h3>4.8</h3>
+            </div>
+
+            <!-- Progress -->
+            <div class="rating-bars">
+              <!-- BAR -->
+              <div class="rating-bar">
+                <span>5</span>
+
+                <div class="progress">
+                  <div class="progress-fill w-80"></div>
+                </div>
+
+                <strong>28</strong>
+              </div>
+
+              <!-- BAR -->
+              <div class="rating-bar">
+                <span>4</span>
+
+                <div class="progress">
+                  <div class="progress-fill w-50"></div>
+                </div>
+
+                <strong>9</strong>
+              </div>
+
+              <!-- BAR -->
+              <div class="rating-bar">
+                <span>3</span>
+
+                <div class="progress">
+                  <div class="progress-fill w-30"></div>
+                </div>
+
+                <strong>4</strong>
+              </div>
+
+              <!-- BAR -->
+              <div class="rating-bar">
+                <span>2</span>
+
+                <div class="progress">
+                  <div class="progress-fill w-15"></div>
+                </div>
+
+                <strong>2</strong>
+              </div>
+
+              <!-- BAR -->
+              <div class="rating-bar">
+                <span>1</span>
+
+                <div class="progress">
+                  <div class="progress-fill w-10"></div>
+                </div>
+
+                <strong>1</strong>
+              </div>
+            </div>
+
+            <!-- Banner -->
+            <div class="promo-banner">
+              <span>New Arrival</span>
+
+              <h2>
+                Discover Our <br />
+                New Collection
+              </h2>
+
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+
+              <button>Buy Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+       RELATED PRODUCTS
+  ============================ -->
+
+    <section class="products section">
+      <div class="products-grid">
+        <!-- PRODUCT CARDS -->
+
+        <article class="product-card">
+          <button class="wishlist-btn"></button>
+
+          <a href="product-details.html" class="img-container">
+            <img
+              src="assets/images/bed1.png"
+              alt="Luxury Bed"
+              class="product-image"
+            />
+          </a>
+
+          <div class="product-info">
+            <div>
+              <h3>Luxury Table</h3>
+              <span class="price">349.00$</span>
+            </div>
+
+            <button class="cart-btn"></button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <button class="wishlist-btn"></button>
+
+          <a href="product-details.html" class="img-container">
+            <img
+              src="assets/images/chair.png"
+              alt="Luxury Chair"
+              class="product-image"
+            />
+          </a>
+
+          <div class="product-info">
+            <div>
+              <h3>Luxury Table</h3>
+              <span class="price">349.00$</span>
+            </div>
+
+            <button class="cart-btn"></button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <button class="wishlist-btn"></button>
+
+          <a href="product-details.html" class="img-container">
+            <img
+              src="assets/images/chair2.png"
+              alt="Gaming Chair"
+              class="product-image"
+            />
+          </a>
+
+          <div class="product-info">
+            <div>
+              <h3>Luxury Table</h3>
+              <span class="price">349.00$</span>
+            </div>
+
+            <button class="cart-btn"></button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <button class="wishlist-btn"></button>
+
+          <a href="product-details.html" class="img-container">
+            <img
+              src="assets/images/table2.png"
+              alt="Wood Table"
+              class="product-image"
+            />
+          </a>
+
+          <div class="product-info">
+            <div>
+              <h3>Luxury Table</h3>
+              <span class="price">349.00$</span>
+            </div>
+
+            <button class="cart-btn"></button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <button class="wishlist-btn"></button>
+
+          <a href="product-details.html" class="img-container">
+            <!-- table image -->
+            <img
+              src="assets/images/table.png"
+              alt="Luxury Table"
+              class="product-image"
+            />
+          </a>
+
+          <div class="product-info">
+            <div>
+              <h3>Luxury Table</h3>
+              <span class="price">349.00$</span>
+            </div>
+
+            <button class="cart-btn"></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===========================
+       NEWSLETTER
+  ============================ -->
+    <div id="newsletter"></div>
+
+    <!-- ===========================
+       FOOTER
+  ============================ -->
+    <div id="footer"></div>
+
+    <script src="js/layout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+/* ========================= */
+/* Testimonials Section */
+/* ========================= */
+
+.testimonials {
+  margin-top: 2rem;
+}
+
+/* ========================= */
+/* Testimonials Grid */
+/* ========================= */
+.test-grid {
+  display: grid;
+  grid-template-areas:
+    "l title"
+    "l r"
+    "l r";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr 1fr;
+}
+.test-header {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.test-title {
+  font-size: clamp(2rem, 2vw, 3rem);
+  width: 75%;
+}
+.test-grid1 {
+  grid-area: l;
+}
+.test-grid2 {
+  grid-area: r;
+}
+.test-grid1,
+.test-grid2 {
+  display: flex;
+  position: relative;
+}
+
+/* ========================= */
+/* Image */
+/* ========================= */
+.img-container {
+  width: 400px;
+  height: 450px;
+}
+.img-container img {
+  width: 95%;
+  height: 78%;
+  object-fit: cover;
+}
+/* ========================= */
+/* Card */
+/* ========================= */
+.test-card {
+  width: 400px;
+  height: 320px;
+  background-color: #1f1f1f;
+  color: var(--color-white);
+  padding: 1.5rem;
+  position: absolute;
+
+  border-top: 9px solid white;
+  border-left: 12px solid white;
+  border-radius: 2.5%;
+}
+.card-r {
+  right: 60px;
+  top: 13px;
+}
+.card-l {
+  left: 105px;
+  top: 90px;
+}
+.quote {
+  font-size: 3rem;
+
+  line-height: 1;
+
+  margin-bottom: 0.5rem;
+}
+.test-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+}
+.test-user {
+  width: 100%;
+  height: 30%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.test-buttons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  left: 5px;
+  bottom: 45px;
+}
+.slid-btn {
+  width: 45px;
+  height: 40px;
+
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 5px 5px;
+
+  transition: "background" 0.3s ease;
+}
+.slid-btn:hover {
+  background-color: #fff;
+}
+
+/* ========================= */
+/* User */
+/* ========================= */
+
+.testimonial-user-name {
+  font-size: 1rem;
+}
+
+.testimonial-user-role {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.avater {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(79, 70, 229, 0.2);
+}
+
+.avater img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+}
+/* ========================= */
+/* Subscribe Section */
+/* ========================= */
+.subscibe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscibe h4 {
+  font-size: 1.5rem;
+}
+.subscibe p {
+  width: 50%;
+  text-align: center;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+@media (max-width: 900px) {
+  .test-grid {
+    display: grid;
+    grid-template-areas:
+      "title ."
+      "l r";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .test-title {
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .card-r {
+    position: relative;
+    left: -295px;
+  }
+  .test-card {
+    width: 310px;
+    height: 350px;
+    top: 60px;
+  }
+
+  .subscibe h4 {
+    font-size: 1rem;
+  }
+  .subscibe p {
+    width: 80%;
+    text-align: center;
+  }
+}

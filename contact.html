@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <link rel="stylesheet" href="css/base/global.css" />
+
+    <!-- Components -->
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/newsletter.css" />
+    <link rel="stylesheet" href="css/components/forms.css" />
+
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       HEADER
+  ========================== -->
+    <div id="header"></div>
+
+    <!-- =========================
+       HERO
+  ========================== -->
+    <section class="hero">
+      <img
+        src="assets/images/contact/banner.jpg"
+        alt="Contact Banner"
+        class="hero-image"
+      />
+
+      <div class="hero-overlay">
+        <h1>Contact</h1>
+
+        <div class="breadcrumb">
+          <a href="#">Home</a>
+
+          <i class="fa-solid fa-arrow-right">→</i>
+
+          <span>Contact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       CONTACT FORM
+  ========================== -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2>Get In Toutch With US</h2>
+
+        <form class="contact-form">
+          <!-- ROW -->
+          <div class="form-row">
+            <!-- INPUT -->
+            <div class="form-group">
+              <label>Your name</label>
+
+              <input type="text" placeholder="Mohammed ali klai" />
+            </div>
+
+            <!-- INPUT -->
+            <div class="form-group">
+              <label>Your Email</label>
+
+              <input type="email" placeholder="Mohammedali@gmail.com" />
+            </div>
+          </div>
+
+          <!-- ROW -->
+          <div class="form-row">
+            <!-- SELECT -->
+            <div class="form-group">
+              <label>What you are interste</label>
+
+              <div class="select-box">
+                <select>
+                  <option>Design&Branding</option>
+                  <option>UI/UX Design</option>
+                  <option>Web Development</option>
+                  <option>Marketing</option>
+                </select>
+
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+
+            <!-- SELECT -->
+            <div class="form-group">
+              <label>Project Budget</label>
+
+              <div class="select-box">
+                <select>
+                  <option>Design&Branding</option>
+                  <option>100$ - 500$</option>
+                  <option>500$ - 1000$</option>
+                  <option>1000$+</option>
+                </select>
+
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="form-group">
+            <label>Message</label>
+
+            <textarea placeholder="write your message"></textarea>
+          </div>
+
+          <!-- BUTTON -->
+          <button type="submit" class="btn btn-primary submit-btn">
+            Just Send
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================
+       NEWSLETTER
+  ========================== -->
+    <!-- <section class="newsletter">
+      <div class="newsletter-container">
+        <form class="newsletter-form">
+          <div class="newsletter-input">
+            <i class="fa-regular fa-envelope"></i>
+
+            <input type="email" placeholder="Enter your email address" />
+          </div>
+
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section> -->
+
+    <div id="newsletter"></div>
+    <!-- =========================
+       FOOTER
+  ========================== -->
+    <div id="footer"></div>
+    <script src="js/layout.js"></script>
+  </body>
+</html>

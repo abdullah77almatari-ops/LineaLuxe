@@ -1,0 +1,167 @@
+.header {
+  padding: 1rem 0;
+  /* position: fixed; */
+}
+.cont-header {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+
+  border-bottom: 1px solid var(--color-border);
+}
+.navbar {
+  display: flex;
+  gap: 20px;
+  /* align-items: center;
+  justify-content: space-around;
+
+  padding-bottom: 1.5rem; */
+
+  /* border-bottom: 1px solid var(--color-border); */
+}
+#click,
+.menu-btn {
+  display: none;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: var(--color-primary);
+}
+
+.logo span {
+  color: var(--color-secondary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-links a {
+  color: var(--color-text);
+
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+
+.user-actions {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+#username-display {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 1.2rem;
+  color: var(--color-text);
+
+  transition: var(--transition);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon-btn:hover {
+  color: var(--color-secondary);
+}
+.icon-btn img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+  margin-bottom: 2px;
+}
+
+.icon-btn p {
+  font-size: 0.7rem;
+  font: bold;
+  font-weight: bold;
+}
+.logout-btn {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  font-weight: 600;
+  color: var(--color-primary);
+}
+/* لاخفاء الوميض */
+#guest-actions,
+#user-actions {
+  visibility: hidden;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    /* visibility: hidden; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: -100%;
+    /* right: 0; */
+    background: #fff;
+    height: 45vh;
+    width: 30%;
+    display: block;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links,
+  .user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .icon-btn img,
+  #username-display {
+    display: none;
+  }
+
+  .icon-btn {
+    flex-direction: row;
+    margin-top: 0.5rem;
+    width: 20px;
+    height: 20px;
+  }
+  .icon-btn p {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .menu-btn {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #click:checked ~ .navbar {
+    right: 0;
+    /* visibility: visible; */
+  }
+}

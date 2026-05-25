@@ -1,0 +1,82 @@
+/* =========================
+     NEWSLETTER
+  ========================= */
+
+.newsletter {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: -40px;
+}
+
+.newsletter-container {
+  width: min(92%, 780px);
+  margin-inline: auto;
+}
+
+.newsletter-form {
+  background: var(--white);
+
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  box-shadow: var(--shadow-md);
+}
+
+.newsletter-input {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding-inline: 15px;
+}
+
+.newsletter-input i {
+  /* width: 50px;
+  height: auto;
+  background-image: url("../../assets/icons/Group.svg"); */
+  color: #888;
+}
+
+.newsletter-input input {
+  /* border: none;
+  width: 100%;
+  font-size: 1.1rem; */
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+
+.newsletter-form button {
+  width: 230px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+@media (max-width: 768px) {
+  .newsletter-container {
+    padding: 3rem 2rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+}
