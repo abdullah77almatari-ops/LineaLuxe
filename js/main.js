@@ -1,7 +1,6 @@
 /* ========================= */
 /* Accordion */
 /* ========================= */
-
 const accordionItems = document.querySelectorAll(".accordion-item");
 
 accordionItems.forEach((item) => {
@@ -13,55 +12,45 @@ accordionItems.forEach((item) => {
 });
 
 /* ========================= */
-/* (Hamburger Menu) */
+/* MOBILE MENU */
 /* ========================= */
-// const btnClick = document.getElementById("click");
-// const nav = document.getElementById("navbar");
-// function hamburger(selector1, selector2) {
-//   if (selector1) {
-//     selector2.Visibility = visible;
-//   }
-//   selector2.Visibility = hidden;
-// }
-// hamburger(btnClick, nav);
+const menuCheckbox = document.getElementById("click");
 
-// Testimonials slider (simple)
-let currentTestimonial = 0;
+const navLinks = document.querySelectorAll(".nav-links a");
 
-const testimonials = document.querySelectorAll(".test-card");
-const prevBtn = document.querySelector(".slid-btn:first-child");
-const nextBtn = document.querySelector(".slid-btn:last-child");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuCheckbox.checked = false;
+    document.body.classList.remove("menu-open");
+  });
+});
 
-function updateSlider() {
-  // يعمل فقط للشاشات الصغيرة
-  if (window.innerWidth <= 700) {
-    testimonials.forEach((card, index) => {
-      card.style.display = index === currentTestimonial ? "block" : "none";
-    });
+/* منع التمرير عند فتح القائمة */
+
+menuCheckbox.addEventListener("change", () => {
+  if (menuCheckbox.checked) {
+    document.body.classList.add("menu-open");
   } else {
-    // في الشاشات الكبيرة يظهر الكرتين معاً
-    testimonials.forEach((card) => {
-      card.style.display = "block";
-    });
+    document.body.classList.remove("menu-open");
   }
+});
+
+/* اغلاق القائمة عند تكبير الشاشة */
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 992) {
+    menuCheckbox.checked = false;
+    document.body.classList.remove("menu-open");
+  }
+});
+/* ========================= */
+/* CLOSE MENU WHEN CLICK OUTSIDE */
+/* ========================= */
+const overlay = document.querySelector(".overlay");
+
+if (overlay) {
+  overlay.addEventListener("click", () => {
+    menuCheckbox.checked = false;
+    document.body.classList.remove("menu-open");
+  });
 }
-
-// أزرار التنقل
-prevBtn.addEventListener("click", () => {
-  currentTestimonial =
-    (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-
-  updateSlider();
-});
-
-nextBtn.addEventListener("click", () => {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-
-  updateSlider();
-});
-
-// عند تحميل الصفحة
-updateSlider();
-
-// عند تغيير حجم الشاشة
-window.addEventListener("resize", updateSlider);
