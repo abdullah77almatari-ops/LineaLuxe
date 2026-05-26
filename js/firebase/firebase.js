@@ -20,12 +20,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export {
-  auth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-};
-console.log("Firebase Loaded Successfully");
-console.log("Auth:", auth);
+export { auth, onAuthStateChanged };
+
+// export {
+//   auth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   onAuthStateChanged,
+//   signOut,
+// };
+// console.log("Firebase Loaded Successfully");
+// console.log("Auth:", auth);

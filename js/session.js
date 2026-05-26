@@ -1,4 +1,4 @@
-import { auth, onAuthStateChanged } from "./firebase.js";
+import { auth, onAuthStateChanged } from "./firebase/firebase.js";
 
 export function watchUser(callback) {
   onAuthStateChanged(auth, (user) => {

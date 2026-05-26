@@ -1,54 +1,43 @@
-import { auth, signInWithEmailAndPassword } from "./firebase.js";
+import * as authService from "./services/authService.js";
+
+import { isValidEmail } from "./utils/validators.js";
+
+import { getFirebaseErrorMessage } from "./utils/errorHandler.js";
 
 const form = document.getElementById("loginForm");
 
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
+if (form) {
+  const emailInput = document.getElementById("email");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  const passwordInput = document.getElementById("password");
 
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // تحقق بسيط
-  if (!email || !password) {
-    alert("Please fill all fields");
-    return;
-  }
+    const email = emailInput.value.trim();
 
-  try {
-    // تسجيل الدخول
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
+    const password = passwordInput.value.trim();
 
-    console.log("Login Success:", userCredential.user);
-
-    alert("Login successful!");
-
-    // تحويل للصفحة الرئيسية
-    window.location.href = "index.html";
-  } catch (error) {
-    console.error(error);
-
-    switch (error.code) {
-      case "auth/invalid-credential":
-        alert("Invalid email or password");
-        break;
-
-      case "auth/user-not-found":
-        alert("User not found");
-        break;
-
-      case "auth/wrong-password":
-        alert("Wrong password");
-        break;
-
-      default:
-        alert(error.message);
+    if (!email || !password) {
+      alert("Please fill all fields");
+      return;
     }
-  }
-});
+
+    if (!isValidEmail(email)) {
+      alert("Invalid email format");
+      return;
+    }
+
+    try {
+      const userCredential = await authService.login(email, password);
+
+      console.log("Login Success:", userCredential.user);
+
+      window.location.href = "index.html";
+    } catch (error) {
+      console.error(error);
+
+      alert(getFirebaseErrorMessage(error));
+    }
+  });
+}
