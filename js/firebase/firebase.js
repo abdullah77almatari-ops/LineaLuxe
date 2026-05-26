@@ -1,14 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   onAuthStateChanged,
-  signOut,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBOv-6pGi459DwYAq1HFjx9rrJXC4o8Two",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "linea-luxe-e021c.firebaseapp.com",
   projectId: "linea-luxe-e021c",
   storageBucket: "linea-luxe-e021c.appspot.com",
@@ -21,13 +18,3 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export { auth, onAuthStateChanged };
-
-// export {
-//   auth,
-//   createUserWithEmailAndPassword,
-//   signInWithEmailAndPassword,
-//   onAuthStateChanged,
-//   signOut,
-// };
-// console.log("Firebase Loaded Successfully");
-// console.log("Auth:", auth);
