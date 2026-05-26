@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Meta -->
@@ -8,7 +8,13 @@
     <title>LineaLuxe | Home</title>
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -71,7 +77,12 @@
 
           <!-- Hero Image -->
           <div class="hero__image">
-            <img src="assets/images/hero-image.jpg" alt="Interior Design" />
+            <img
+              src="assets/images/hero-image.jpg"
+              alt="Interior Design"
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
         </div>
       </section>
@@ -108,7 +119,12 @@
           <div class="rectangle"></div>
           <!-- <img src="assets/images/statistics.jpg" alt="Interior Design" /> -->
           <div class="image-box">
-            <img src="assets/images/statistics.jpg" alt="Interior Design" />
+            <img
+              src="assets/images/statistics.jpg"
+              alt="Interior Design"
+              loading="eager"
+              fetchpriority="high"
+            />
           </div>
           <div class="dark-box">
             <div class="arrow"></div>
@@ -137,6 +153,8 @@
                 src="assets/icons/light-icon.png"
                 alt="Lighting Design"
                 class="service-icon"
+                loading="lazy"
+                decoding="async"
               />
 
               <h3 class="service-title">Lighting Design</h3>
@@ -154,6 +172,8 @@
                 src="assets/icons/interior-icon.png"
                 alt="Interior Design"
                 class="service-icon"
+                loading="lazy"
+                decoding="async"
               />
 
               <h3 class="service-title">Interior Design</h3>
@@ -179,6 +199,7 @@
               src="assets/images/about-room.png"
               alt="Living Room"
               loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -305,6 +326,7 @@
               src="assets/images/process-room.jpg"
               alt="Interior Process"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -325,7 +347,11 @@
           <!-- Left Image -->
           <div class="test-grid1">
             <div class="img-container">
-              <img src="/assets/images/testimonial-room.jpg" loading="lazy" />
+              <img
+                src="/assets/images/testimonial-room.jpg"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <!-- Testimonial Card -->
@@ -340,12 +366,12 @@
 
               <!-- User -->
               <div class="test-user">
-                <!-- صورة العميل -->
                 <div class="avater">
                   <img
                     src="assets/images/client_w.png"
                     alt="Client"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -378,12 +404,12 @@
 
               <!-- User -->
               <div class="test-user">
-                <!-- صورة العميل -->
                 <div class="avater">
                   <img
                     src="assets/images/client_m.webp"
                     alt="Client"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

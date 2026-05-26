@@ -21,9 +21,10 @@
 }
 .signup-image {
   flex: 1;
-  background: url("../assets/images/img-signUp.jpg") center/cover;
+  /* background: url("../assets/images/img-signUp.jpg") center/cover; */
   min-height: 400px;
 }
+
 .signup-title {
   margin-bottom: 30px;
   text-align: center;
@@ -38,5 +39,8 @@
   }
   .signup-image {
     min-height: 200px;
+    /* width: 700px;
+    height: 200px; */
+    order: -1;
   }
 }

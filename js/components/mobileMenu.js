@@ -1,22 +1,35 @@
 import { $ } from "../utils/dom.js";
 // import { BREAKPOINTS } from "./constants/breakpoints";
 
+let isMenuOpen = false;
 const menuCheckbox = $("#menu-checkbox");
 const navLinks = document.querySelectorAll(".nav-link");
 
+// function closeMenu() {
+//   if (!menuCheckbox) return;
+
+//   menuCheckbox.checked = false;
+
+//   document.body.classList.remove("menu-open");
+// }
 function closeMenu() {
-  if (!menuCheckbox) return;
+  if (!menuCheckbox || !isMenuOpen) return;
 
   menuCheckbox.checked = false;
 
   document.body.classList.remove("menu-open");
+
+  isMenuOpen = false;
 }
 
 export function initMobileMenu() {
   if (!menuCheckbox) return;
 
   menuCheckbox.addEventListener("change", () => {
-    document.body.classList.toggle("menu-open", menuCheckbox.checked);
+    // document.body.classList.toggle("menu-open", menuCheckbox.checked);
+    isMenuOpen = menuCheckbox.checked;
+
+    document.body.classList.toggle("menu-open", isMenuOpen);
   });
 
   navLinks.forEach((link) => {

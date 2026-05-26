@@ -1,19 +1,23 @@
 import { initMobileMenu } from "./components/mobileMenu.js";
 
+import { loadPageFeatures } from "./router/pageLoader.js";
+
 initMobileMenu();
+
+await loadPageFeatures();
 
 /* ========================= */
 /* Accordion */
 /* ========================= */
 
-const accordionItems = document.querySelectorAll(".accordion-item");
-
-accordionItems.forEach((item) => {
-  const header = item.querySelector(".accordion-header");
+document.addEventListener("click", (e) => {
+  const header = e.target.closest(".accordion-header");
 
   if (!header) return;
 
-  header.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
+  const item = header.closest(".accordion-item");
+
+  if (!item) return;
+
+  item.classList.toggle("active");
 });

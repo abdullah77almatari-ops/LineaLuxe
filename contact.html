@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,6 +51,8 @@
         src="assets/images/contact/banner.jpg"
         alt="Contact Banner"
         class="hero-image"
+        loading="eager"
+        fetchpriority="high"
       />
 
       <div class="hero-overlay">
@@ -146,25 +148,13 @@
     <!-- =========================
        NEWSLETTER
   ========================== -->
-    <!-- <section class="newsletter">
-      <div class="newsletter-container">
-        <form class="newsletter-form">
-          <div class="newsletter-input">
-            <i class="fa-regular fa-envelope"></i>
-
-            <input type="email" placeholder="Enter your email address" />
-          </div>
-
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-    </section> -->
-
     <div id="newsletter"></div>
+
     <!-- =========================
        FOOTER
   ========================== -->
     <div id="footer"></div>
-    <script src="js/layout.js"></script>
+
+    <script type="module" src="/js/layout.js"></script>
   </body>
 </html>
