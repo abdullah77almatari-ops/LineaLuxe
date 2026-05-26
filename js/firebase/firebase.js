@@ -1,20 +1,25 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import {
-  getAuth,
-  onAuthStateChanged,
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import { initializeApp } from "firebase/app";
+
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "linea-luxe-e021c.firebaseapp.com",
-  projectId: "linea-luxe-e021c",
-  storageBucket: "linea-luxe-e021c.appspot.com",
-  messagingSenderId: "438705566747",
-  appId: "1:438705566747:web:84bfa34261e22d6d58f4be",
-  measurementId: "G-2FCDZZR0GJ",
+
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
+
 const auth = getAuth(app);
 
 export { auth, onAuthStateChanged };
