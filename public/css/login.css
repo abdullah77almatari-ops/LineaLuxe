@@ -21,7 +21,7 @@
 }
 .auth-image {
   flex: 1;
-  background: url("../assets/images/img-login.jpg") center/cover;
+  background: url("/assets/images/img-login.jpg") center/cover;
   min-height: 400px;
 }
 .auth-title {
