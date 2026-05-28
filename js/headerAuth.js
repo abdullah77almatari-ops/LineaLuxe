@@ -1,6 +1,7 @@
 import { auth, onAuthStateChanged } from "./firebase/firebase.js";
 
 import { logout } from "./services/authService.js";
+import { showToast } from "./utils/toast.js";
 // عناصر الواجهة
 const guestActions = document.getElementById("guest-actions");
 
@@ -12,7 +13,8 @@ const logoutBtn = document.getElementById("logout-btn");
 
 // حماية إضافية
 if (!guestActions || !userActions || !usernameDisplay) {
-  console.error("Header elements not found");
+  // console.error("Header elements not found");
+  showToast("Header elements not found", "error");
 } else {
   // مراقبة المستخدم
   onAuthStateChanged(auth, (user) => {
@@ -41,9 +43,8 @@ if (!guestActions || !userActions || !usernameDisplay) {
 
       window.location.href = "login.html";
     } catch (error) {
-      console.error(error);
-
-      alert("Logout failed");
+      showToast(`Error: ${error.message}`, "error");
+      // alert("Logout failed");
     }
   });
 }

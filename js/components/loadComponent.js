@@ -1,3 +1,5 @@
+import { showToast } from "../utils/toast";
+
 export async function loadComponent(selector, path) {
   try {
     const container = document.querySelector(selector);
@@ -12,6 +14,7 @@ export async function loadComponent(selector, path) {
 
     container.innerHTML = await response.text();
   } catch (error) {
-    console.error(error);
+    // console.error(error);
+    showToast(`Error loading component: ${error.message}`, "error");
   }
 }
