@@ -120,20 +120,11 @@
     grid-template-columns: 1fr;
   }
 
-  .newsletter-form,
   .footer-container {
     flex-direction: column;
   }
 
   .submit-btn {
-    width: 100%;
-  }
-
-  .newsletter-form {
-    height: auto;
-  }
-
-  .newsletter-form button {
     width: 100%;
   }
 }

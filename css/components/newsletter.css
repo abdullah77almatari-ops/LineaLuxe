@@ -76,3 +76,12 @@
     width: 100%;
   }
 }
+@media (max-width: 490px) {
+  .newsletter-container {
+    width: min(95%, 780px);
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+}

@@ -15,7 +15,6 @@ body.menu-open {
 /* ========================= */
 /* HEADER */
 /* ========================= */
-
 .header {
   position: sticky;
   top: 0;
@@ -23,6 +22,7 @@ body.menu-open {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  margin-bottom: 1rem;
 
   z-index: 9999;
 
@@ -71,7 +71,8 @@ body.menu-open {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 5rem;
+  margin-right: 10rem;
 }
 
 .nav-links li {
@@ -285,7 +286,7 @@ body.menu-open {
     top: 0;
     right: 0;
 
-    width: 320px;
+    width: 250px;
     max-width: 85%;
 
     height: 100vh;
@@ -298,7 +299,7 @@ body.menu-open {
     align-items: flex-start;
     justify-content: flex-start;
 
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.12);
 
@@ -399,10 +400,5 @@ body.menu-open {
 
   .cont-header {
     min-height: 72px;
-  }
-
-  .navbar {
-    width: 100%;
-    max-width: 100%;
   }
 }

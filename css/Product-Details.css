@@ -458,7 +458,9 @@
 
   margin-bottom: 14px;
 
-  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 14px 20px rgba(0, 0, 0, 0.08),
+    0 3px 8px rgba(0, 0, 0, 0.04);
 
   transition: 0.3s ease;
   cursor: pointer;
@@ -556,10 +558,6 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .product-info h1 {
     font-size: 1.2rem;
   }
@@ -573,7 +571,6 @@
     grid-template-columns: 1fr;
   }
 
-  .newsletter-form,
   .footer-container,
   .product-actions {
     flex-direction: column;
@@ -584,30 +581,116 @@
   }
 }
 
-@media (max-width: 576px) {
-  .tabs {
-    flex-wrap: wrap;
+@media (max-width: 490px) {
+  .product-gallery {
+    display: flex;
+  }
+  .main-image {
+    width: 300px;
+    height: 550px;
+    object-fit: cover;
+
+    border-radius: var(--radius-md);
+  }
+
+  .thumbnail-wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 5px;
+    gap: 5px;
+  }
+
+  .thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .product-inf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 0px; */
+  }
+
+  .product-inf h3 {
+    font-size: 14px;
+    font-weight: 600;
+    /* margin-bottom: 0px; */
+  }
+
+  .price {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .product-option {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-option h3 {
+    font-size: 1.5rem;
+  }
+
+  .size-options {
+    display: flex;
+    gap: 10px;
+  }
+
+  .size-options button {
+    min-width: 100px;
+    height: 65px;
+    font-size: 1rem;
+  }
+  .reviews-grid {
     gap: 20px;
+  }
+  .product-actions {
+    /* order: 2; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+    gap: 20px;
+  }
+  .add-cart-btn {
+    flex: 1;
+    height: 80px;
+    width: 250px;
+  }
+
+  .tabs {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
   }
 
   .tabs button {
     font-size: 1.4rem;
   }
-
-  .main-image {
-    height: 350px;
-  }
-
-  .thumbnail-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .review-card {
-    flex-direction: column;
+    padding: 0 0;
+    border-bottom: 1px solid #ddd;
   }
-
-  .review-top {
-    flex-direction: column;
-    gap: 10px;
+  .review-content p {
+    font-size: 0.7rem;
+  }
+  .review-content h4 {
+    font-size: 1rem;
+  }
+  .overall-rating h3 {
+    font-size: 2rem;
+  }
+  .progress {
+    height: 15px;
   }
 }
