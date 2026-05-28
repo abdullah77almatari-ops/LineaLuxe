@@ -3,6 +3,7 @@ import * as authService from "./services/authService.js";
 import { isValidEmail, isStrongPassword } from "./utils/validators.js";
 
 import { getFirebaseErrorMessage } from "./utils/errorHandler.js";
+import { showToast } from "./utils/toast.js";
 
 const form = document.getElementById("signupForm");
 
@@ -27,35 +28,34 @@ if (form) {
     const confirmPassword = confirmPasswordInput.value.trim();
 
     if (!username || !email || !password || !confirmPassword) {
-      alert("Please fill all fields");
+      // alert("Please fill all fields");
+      showToast("Please fill all fields", "error");
       return;
     }
 
     if (!isValidEmail(email)) {
-      alert("Invalid email format");
+      showToast("Invalid email format", "error");
       return;
     }
 
     if (!isStrongPassword(password)) {
-      alert("Password must be at least 8 characters");
+      showToast("Password must be at least 8 characters", "error");
       return;
     }
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      showToast("Passwords do not match", "error");
       return;
     }
 
     try {
       await authService.register(email, password);
 
-      alert("Account created successfully!");
+      showToast("Account created successfully!", "success");
 
       window.location.href = "login.html";
     } catch (error) {
-      console.error(error);
-
-      alert(getFirebaseErrorMessage(error));
+      showToast(getFirebaseErrorMessage(error), "error");
     }
   });
 }

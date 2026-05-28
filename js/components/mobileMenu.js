@@ -1,17 +1,10 @@
 import { $ } from "../utils/dom.js";
-// import { BREAKPOINTS } from "./constants/breakpoints";
+// import { BREAKPOINTS } from "../constants/breakpoints.js";
 
 let isMenuOpen = false;
 const menuCheckbox = $("#menu-checkbox");
 const navLinks = document.querySelectorAll(".nav-link");
 
-// function closeMenu() {
-//   if (!menuCheckbox) return;
-
-//   menuCheckbox.checked = false;
-
-//   document.body.classList.remove("menu-open");
-// }
 function closeMenu() {
   if (!menuCheckbox || !isMenuOpen) return;
 

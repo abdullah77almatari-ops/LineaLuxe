@@ -1,10 +1,16 @@
 import { initMobileMenu } from "./components/mobileMenu.js";
 
 import { loadPageFeatures } from "./router/pageLoader.js";
+import { showToast } from "./utils/toast.js";
 
 initMobileMenu();
 
-await loadPageFeatures();
+try {
+  await loadPageFeatures();
+} catch (error) {
+  // showToast('Failed to load page features ${error.message}', "error");
+  showToast(`Failed to load page features: ${error.message}`, "error");
+}
 
 /* ========================= */
 /* Accordion */

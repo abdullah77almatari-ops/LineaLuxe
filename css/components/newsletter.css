@@ -69,11 +69,7 @@
 /* ========================= */
 @media (max-width: 768px) {
   .newsletter-container {
-    padding: 3rem 2rem;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
+    width: min(80%, 780px);
   }
 
   .newsletter-form input {
