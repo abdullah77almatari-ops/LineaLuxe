@@ -1,5 +1,5 @@
 import { loadComponent } from "./components/loadComponent.js";
-import { initMobileMenu } from "./mobileMenu.js";
+import { initMobileMenu } from "./components/mobileMenu.js";
 
 await Promise.all([
   loadComponent("#header", "/components/header.html"),
