@@ -107,10 +107,6 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .hero-overlay h1 {
     font-size: 3rem;
   }

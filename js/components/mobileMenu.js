@@ -1,87 +1,32 @@
-import { $ } from "../utils/dom.js";
-// import { BREAKPOINTS } from "../constants/breakpoints.js";
+import { $, $$ } from "../utils/dom.js"; // 🌟 تأكد فقط من أن هذا المسار يؤدي إلى ملف dom.js لديك
 
-let isMenuOpen = false;
-const menuCheckbox = $("#menu-checkbox");
-const navLinks = document.querySelectorAll(".nav-link");
-
-function closeMenu() {
-  if (!menuCheckbox || !isMenuOpen) return;
-
+// دالة مساعدة لإغلاق القائمة وإعادة التمرير للموقع
+function closeMenu(menuCheckbox) {
+  if (!menuCheckbox) return;
   menuCheckbox.checked = false;
-
   document.body.classList.remove("menu-open");
-
-  isMenuOpen = false;
 }
 
 export function initMobileMenu() {
+  // 🌟 استخدام دوال المساعدة الـ الخاصه بك لجلب العناصر بعد حقن الـ HTML
+  const menuCheckbox = $("#click"); // يعادل document.querySelector("#click")
+  const navLinks = $$(".nav-links a"); // يعادل document.querySelectorAll(".nav-links a")
+  const overlay = $(".overlay"); // يعادل document.querySelector(".overlay")
+
   if (!menuCheckbox) return;
 
+  // مراقبة فتح وإغلاق القائمة لمنع تمرير الصفحة الخلفية
   menuCheckbox.addEventListener("change", () => {
-    // document.body.classList.toggle("menu-open", menuCheckbox.checked);
-    isMenuOpen = menuCheckbox.checked;
-
-    document.body.classList.toggle("menu-open", isMenuOpen);
+    document.body.classList.toggle("menu-open", menuCheckbox.checked);
   });
 
+  // 1. إغلاق القائمة عند الضغط على أي رابط تنقل
   navLinks.forEach((link) => {
-    link.addEventListener("click", closeMenu);
+    link.addEventListener("click", () => closeMenu(menuCheckbox));
   });
 
-  document.addEventListener("click", (e) => {
-    const navbar = document.querySelector(".navbar");
-
-    if (!navbar) return;
-
-    const isInsideNavbar = navbar.contains(e.target);
-
-    if (!isInsideNavbar && menuCheckbox.checked) {
-      closeMenu();
-    }
-  });
+  // 2. إغلاق القائمة عند الضغط على الـ Overlay الرمادي (خارج النافبار)
+  if (overlay) {
+    overlay.addEventListener("click", () => closeMenu(menuCheckbox));
+  }
 }
-
-/* ========================= */
-/* MOBILE MENU */
-/* ========================= */
-// const menuCheckbox = document.getElementById("click");
-
-// const navLinks = document.querySelectorAll(".nav-links a");
-
-// navLinks.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     menuCheckbox.checked = false;
-//     document.body.classList.remove("menu-open");
-//   });
-// });
-
-/* منع التمرير عند فتح القائمة */
-
-// menuCheckbox.addEventListener("change", () => {
-//   if (menuCheckbox.checked) {
-//     document.body.classList.add("menu-open");
-//   } else {
-//     document.body.classList.remove("menu-open");
-//   }
-// });
-
-/* اغلاق القائمة عند تكبير الشاشة */
-
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth > BREAKPOINTS.DESKTOP) {
-//     menuCheckbox.checked = false;
-//     document.body.classList.remove("menu-open");
-//   }
-// });
-/* ========================= */
-/* CLOSE MENU WHEN CLICK OUTSIDE */
-/* ========================= */
-// const overlay = document.querySelector(".overlay");
-
-// if (overlay) {
-//   overlay.addEventListener("click", () => {
-//     menuCheckbox.checked = false;
-//     document.body.classList.remove("menu-open");
-//   });
-// }
