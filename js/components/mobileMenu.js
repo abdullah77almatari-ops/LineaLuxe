@@ -1,4 +1,4 @@
-import { $, $$ } from "../utils/dom.js"; // 🌟 تأكد فقط من أن هذا المسار يؤدي إلى ملف dom.js لديك
+import { $, $$ } from "../utils/dom"; // 🌟 تأكد فقط من أن هذا المسار يؤدي إلى ملف dom.js لديك
 
 // دالة مساعدة لإغلاق القائمة وإعادة التمرير للموقع
 function closeMenu(menuCheckbox) {

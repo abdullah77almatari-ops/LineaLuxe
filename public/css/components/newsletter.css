@@ -69,19 +69,22 @@
 /* ========================= */
 @media (max-width: 768px) {
   .newsletter-container {
-    width: min(80%, 780px);
-  }
-
-  .newsletter-form input {
-    width: 100%;
-  }
-}
-@media (max-width: 490px) {
-  .newsletter-container {
     width: min(95%, 780px);
   }
 
-  .newsletter-form input {
+  /* .newsletter-form input {
     width: 100%;
+  } */
+}
+@media (max-width: 490px) {
+  .newsletter-container {
+    width: min(100%, 780px);
   }
+  .newsletter-form button {
+    width: 200px;
+    height: 50px;
+  }
+  /* .newsletter-form input {
+    width: 100%;
+  } */
 }
