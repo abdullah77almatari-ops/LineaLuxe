@@ -31,8 +31,10 @@ if (!guestActions || !userActions || !usernameDisplay) {
     }
 
     // إظهار العناصر بعد تحديد الحالة
-    guestActions.style.visibility = "visible";
-    userActions.style.visibility = "visible";
+    // guestActions.style.visibility = "visible";
+    // userActions.style.visibility = "visible";
+    guestActions.style.opacity = "1";
+    userActions.style.opacity = "1";
   });
 
   // تسجيل الخروج
