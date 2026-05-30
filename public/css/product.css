@@ -346,3 +346,9 @@
     padding: 18px;
   }
 }
+@media (max-width: 450px) {
+  .hero {
+    width: min(100%, 400px);
+    margin: 10px;
+  }
+}
