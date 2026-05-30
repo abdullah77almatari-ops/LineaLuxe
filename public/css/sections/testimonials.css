@@ -203,3 +203,10 @@
     text-align: center;
   }
 }
+@media (max-width: 490px) {
+  .test-card {
+    width: 280px;
+    height: 400px;
+    top: 30px;
+  }
+}
